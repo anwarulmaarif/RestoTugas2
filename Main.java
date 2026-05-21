@@ -50,10 +50,7 @@ public class Main {
         daftarMenu.add(new Menu("Kopi Susu Gula Aren", 12000, "Minuman"));
     }
 
-    /**
-     * METHOD: Menampilkan Daftar Menu
-     * Layout dirapikan dengan pembatasan lebar tabel agar rapi di monitor.
-     */
+    // METHOD: Menampilkan Daftar Menu
     static void tampilkanDaftarMenu() {
         System.out.println("\n=============================================");
         System.out.println("            DAFTAR MENU RESTORAN             ");
@@ -119,10 +116,7 @@ public class Main {
         }
     }
 
-    /**
-     * METHOD: Proses Transaksi & Cetak Struk (Perbaikan Layout Kompleks)
-     * Mengatur agar nama menu panjang tidak merusak struktur layout struk dengan lebar 45 karakter.
-     */
+    //METHOD: Proses Transaksi & Cetak Struk
     static void prosesTransaksi(ArrayList<Menu> items, ArrayList<Integer> jumlahs) {
         double subtotalBelanja = 0;
         
@@ -148,7 +142,7 @@ public class Main {
             }
         }
 
-        // Evaluasi Diskon 10% (> Rp 100.000)
+        // cek Diskon 10% (> Rp 100.000)
         double diskonUmum = 0;
         if (subtotalBelanja > 100000) {
             diskonUmum = 0.10 * subtotalBelanja;
@@ -238,7 +232,7 @@ public class Main {
     }
 
     /**
-     * PERBAIKAN 1A: Tambah Menu Baru (Dengan Fitur Cancel)
+     * Tambah Menu Baru
      */
     static void tambahMenuBaru() {
         boolean lanjutTambah = true;
@@ -305,7 +299,7 @@ public class Main {
     }
 
     /**
-     * PERBAIKAN 1B: Ubah Harga Menu (Dengan Fitur Cancel angka '0')
+     * Ubah Harga Menu
      */
     static void ubahHargaMenu() {
         System.out.println("\n--- Fitur Ubah Harga Menu ---");
@@ -356,7 +350,7 @@ public class Main {
     }
 
     /**
-     * PERBAIKAN 1C: Hapus Menu Restoran (Dengan Fitur Cancel angka '0')
+     * Hapus Menu Restoran
      */
     static void hapusMenuRestoran() {
         System.out.println("\n--- Fitur Hapus Menu Restoran ---");
